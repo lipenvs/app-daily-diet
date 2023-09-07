@@ -1,20 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ProfileHeader } from "@/components/ProfileHeader";
+
+import { Container } from "./styles";
 
 export function Home() {
   return (
-    <View style={styles.container}>
-      <Text>Felipe Neves2</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Container>
+      <ProfileHeader />
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
