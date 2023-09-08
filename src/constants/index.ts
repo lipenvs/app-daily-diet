@@ -1,0 +1,1 @@
+export const CRITICAL_PERCENTAGE_VALUE = 80;
