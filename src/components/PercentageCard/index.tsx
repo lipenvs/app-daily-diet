@@ -2,6 +2,7 @@ import { TouchableOpacityProps } from "react-native";
 import {
   Container,
   CurrentPorcentageStyleProps,
+  Icon,
   PorcentageValue,
   Subtitle,
 } from "./styles";
@@ -24,7 +25,7 @@ export function PorcentageCard({
 
   return (
     <Container currentPorcentage={currentPorcentage} {...rest}>
-      {/* <Icon /> */}
+      <Icon currentPorcentage={currentPorcentage} />
       <PorcentageValue>{`${formattedPorcentage}%`}</PorcentageValue>
       <Subtitle>{subtitle}</Subtitle>
     </Container>

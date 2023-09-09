@@ -9,7 +9,7 @@ export function Home() {
       <ProfileHeader />
 
       <PorcentageCard
-        currentPorcentage={65.4}
+        currentPorcentage={95.4}
         subtitle="das refeições dentro da dieta"
         style={{ marginTop: 32 }}
       />

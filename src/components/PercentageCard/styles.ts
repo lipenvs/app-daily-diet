@@ -36,4 +36,15 @@ export const Subtitle = styled.Text`
   text-align: center;
 `;
 
-// export const Icon = styled(ArrowUpRight)``;
+export const Icon = styled(ArrowUpRight).attrs<Props>(
+  ({ theme, currentPorcentage }) => ({
+    color:
+      currentPorcentage > CRITICAL_PERCENTAGE_VALUE
+        ? theme.COLORS.GREEN_DARK
+        : theme.COLORS.RED_DARK,
+  })
+)`
+  position: absolute;
+  margin: 16px;
+  right: 0;
+`;
