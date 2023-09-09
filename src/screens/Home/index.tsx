@@ -1,7 +1,8 @@
-import { ProfileHeader } from "@/components/ProfileHeader";
-
 import { Container } from "./styles";
+
+import { ProfileHeader } from "@/components/ProfileHeader";
 import { PorcentageCard } from "@/components/PercentageCard";
+import { MealList } from "@/components/MealList";
 
 export function Home() {
   return (
@@ -13,6 +14,8 @@ export function Home() {
         subtitle="das refeições dentro da dieta"
         style={{ marginTop: 32 }}
       />
+
+      <MealList />
     </Container>
   );
 }
