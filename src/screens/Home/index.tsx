@@ -1,8 +1,9 @@
-import { Container } from "./styles";
+import { Container, Title } from "./styles";
 
 import { ProfileHeader } from "@/components/ProfileHeader";
 import { PorcentageCard } from "@/components/PercentageCard";
-import { MealList } from "@/components/MealList";
+import { Button } from "@/components/Button";
+import { DailyMeals } from "@/components/DailyMeals";
 
 export function Home() {
   return (
@@ -15,7 +16,11 @@ export function Home() {
         style={{ marginTop: 32 }}
       />
 
-      <MealList />
+      <Title>Refeições</Title>
+      <Button iconName="add" text="Nova refeição" />
+
+      <DailyMeals />
+      <DailyMeals />
     </Container>
   );
 }
