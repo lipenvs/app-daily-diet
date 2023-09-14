@@ -20,21 +20,6 @@ export const Container = styled(TouchableOpacity)<Props>`
   padding: 20px 12px;
 `;
 
-export const PorcentageValue = styled.Text`
-  ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.XXL}px;
-    font-family: ${theme.FONT_FAMILY.BOLD};
-  `}
-  text-align: center;
-`;
-
-export const Subtitle = styled.Text`
-  ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.SM}px;
-    font-family: ${theme.FONT_FAMILY.REGULAR};
-  `}
-  text-align: center;
-`;
 
 export const Icon = styled(ArrowUpRight).attrs<Props>(
   ({ theme, currentPorcentage }) => ({

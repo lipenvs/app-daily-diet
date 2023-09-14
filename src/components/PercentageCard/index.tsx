@@ -3,9 +3,8 @@ import {
   Container,
   CurrentPorcentageStyleProps,
   Icon,
-  PorcentageValue,
-  Subtitle,
 } from "./styles";
+import { PercentageValue } from "../PercentageValue";
 
 type Props = TouchableOpacityProps & {
   currentPorcentage: CurrentPorcentageStyleProps;
@@ -17,17 +16,10 @@ export function PorcentageCard({
   subtitle,
   ...rest
 }: Props) {
-  const formattedPorcentage = currentPorcentage.toLocaleString(undefined, {
-    style: "decimal",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-
   return (
     <Container currentPorcentage={currentPorcentage} {...rest}>
       <Icon currentPorcentage={currentPorcentage} />
-      <PorcentageValue>{`${formattedPorcentage}%`}</PorcentageValue>
-      <Subtitle>{subtitle}</Subtitle>
+      <PercentageValue value={90} />
     </Container>
   );
 }
