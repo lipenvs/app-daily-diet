@@ -7,9 +7,9 @@ type Props = {
 
 export function StatisticsHeader({ percentage }: Props) {
   return (
-    <Container>
+    <Container currentPorcentage={percentage}>
       <BackButton>
-        <BackIcon />
+        <BackIcon currentPorcentage={percentage} />
       </BackButton>
 
       <PercentageValue percentage={percentage} />

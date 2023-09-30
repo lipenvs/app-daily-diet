@@ -15,7 +15,7 @@ export function PorcentageCard({
   return (
     <Container currentPorcentage={currentPorcentage} {...rest}>
       <Icon currentPorcentage={currentPorcentage} />
-      <PercentageValue percentage={90} />
+      <PercentageValue percentage={91} />
     </Container>
   );
 }
