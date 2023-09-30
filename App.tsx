@@ -7,6 +7,8 @@ import {
   NunitoSans_700Bold,
 } from "@expo-google-fonts/nunito-sans";
 import { ActivityIndicator } from "react-native";
+import { Statistics } from "@/screens/Statistics";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -16,7 +18,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={myTheme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      <StatusBar style="auto" />
+      {fontsLoaded ? <Statistics /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
