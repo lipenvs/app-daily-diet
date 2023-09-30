@@ -1,5 +1,5 @@
-import { Formatter } from "@/utils/Formatter";
-import { Container, Title, Subtitle, BackButton, BackIcon } from "./styles";
+import { Container, BackButton, BackIcon } from "./styles";
+import { PercentageValue } from "../PercentageValue";
 
 type Props = {
   percentage: number;
@@ -12,8 +12,7 @@ export function StatisticsHeader({ percentage }: Props) {
         <BackIcon />
       </BackButton>
 
-      <Title>{`${Formatter.NumberWithDecimal(percentage, 2)}%`}</Title>
-      <Subtitle>das refeições dentro da dieta</Subtitle>
+      <PercentageValue percentage={percentage} />
     </Container>
   );
 }

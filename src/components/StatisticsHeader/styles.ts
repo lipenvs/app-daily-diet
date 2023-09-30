@@ -10,22 +10,6 @@ export const Container = styled(SafeAreaView)`
   padding: 24px;
 `;
 
-export const Title = styled.Text`
-  ${({ theme }) => css`
-    font-family: ${theme.FONT_FAMILY.BOLD};
-    font-size: ${theme.FONT_SIZE.XXL}px;
-  `}
-  text-align: center
-`;
-
-export const Subtitle = styled.Text`
-  ${({ theme }) => css`
-    font-family: ${theme.FONT_FAMILY.REGULAR};
-    font-size: ${theme.FONT_SIZE.SM}px;
-  `}
-  text-align: center
-`;
-
 export const BackButton = styled(TouchableOpacity)``;
 
 export const BackIcon = styled(ArrowLeft).attrs(({ theme }) => ({
