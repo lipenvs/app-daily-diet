@@ -17,7 +17,7 @@ export function Home() {
       />
 
       <Title>Refeições</Title>
-      <Button iconName="add" text="Nova refeição" />
+      <Button iconName="add" label="Nova refeição" />
 
       <DailyMeals />
       <DailyMeals />

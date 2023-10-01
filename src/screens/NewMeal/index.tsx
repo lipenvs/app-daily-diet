@@ -1,17 +1,35 @@
 import { Input } from "@/components/Input";
-import { Container } from "./styles";
+import { Container, Content, Row } from "./styles";
+import { Button } from "@/components/Button";
+import { Radio } from "@/components/Radio";
 
 export function NewMeal() {
   return (
     <Container>
-      <Input label="Nome" />
+      <Content>
+        <Row>
+          <Input label="Nome" />
+        </Row>
 
-      <Input
-        label="Descrição"
-        multiline
-        numberOfLines={4}
-        style={{ textAlignVertical: "top" }}
-      />
+        <Row>
+          <Input
+            label="Descrição"
+            multiline
+            numberOfLines={4}
+            style={{ textAlignVertical: "top" }}
+          />
+        </Row>
+
+        <Row>
+          <Input label="Data" />
+
+          <Input label="Hora" />
+        </Row>
+
+        <Radio />
+      </Content>
+
+      <Button label="Cadastrar refeição" />
     </Container>
   );
 }

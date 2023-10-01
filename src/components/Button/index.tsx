@@ -2,15 +2,15 @@ import { Container, Icon, Label } from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";
 
 type Props = {
-  text: string;
-  iconName: keyof typeof MaterialIcons.glyphMap;
+  label: string;
+  iconName?: keyof typeof MaterialIcons.glyphMap;
 };
 
-export function Button({ text }: Props) {
+export function Button({ label, iconName }: Props) {
   return (
     <Container>
-      <Icon name="add" />
-      <Label>{text}</Label>
+      {iconName && <Icon name={iconName} />}
+      <Label>{label}</Label>
     </Container>
   );
 }
