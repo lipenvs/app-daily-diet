@@ -1,4 +1,4 @@
-import { Meal } from "../Meal";
+import { ListItem } from "../ListItem";
 import { Container, Title } from "./styles";
 
 export function DailyMeals() {
@@ -6,8 +6,8 @@ export function DailyMeals() {
     <Container>
       <Title>20/04/2021</Title>
 
-      <Meal mealName="X-Tudo" isOk time="20:00" />
-      <Meal mealName="X-Tudo" isOk time="20:00" />
+      <ListItem mealName="X-Tudo" isOk time="20:00" />
+      <ListItem mealName="X-Tudo" isOk time="20:00" />
     </Container>
   );
 }

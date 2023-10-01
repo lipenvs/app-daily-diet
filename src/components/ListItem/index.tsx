@@ -6,7 +6,7 @@ type Props = {
   time: string;
 };
 
-export function Meal({ isOk, mealName, time }: Props) {
+export function ListItem({ isOk, mealName, time }: Props) {
   return (
     <Container>
       <Time>{time}</Time>

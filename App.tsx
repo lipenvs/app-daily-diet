@@ -9,6 +9,7 @@ import {
 import { ActivityIndicator } from "react-native";
 import { Statistics } from "@/screens/Statistics";
 import { StatusBar } from "expo-status-bar";
+import { NewMeal } from "@/screens/NewMeal";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <ThemeProvider theme={myTheme}>
       <StatusBar style="auto" />
-      {fontsLoaded ? <Statistics /> : <ActivityIndicator />}
+      {fontsLoaded ? <NewMeal /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
