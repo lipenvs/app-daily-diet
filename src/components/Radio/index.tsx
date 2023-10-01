@@ -7,11 +7,12 @@ export function Radio() {
       <Label>Está dentro da dieta?</Label>
 
       <Row>
-        <Option>
+        <Option isActive={false}>
           <CircleIcon color={myTheme.COLORS.GREEN_DARK} />
           <Label>Sim</Label>
         </Option>
-        <Option>
+
+        <Option isActive={true} isDanger>
           <CircleIcon color={myTheme.COLORS.RED_DARK} />
           <Label>Não</Label>
         </Option>

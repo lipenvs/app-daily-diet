@@ -1,9 +1,13 @@
 import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 import { Circle } from "phosphor-react-native";
-import { myTheme } from "@/theme";
 
 export const Container = styled.View``;
+
+type Props = {
+  isActive: boolean;
+  isDanger?: boolean;
+};
 
 export const Label = styled.Text`
   ${({ theme }) => css`
@@ -12,9 +16,21 @@ export const Label = styled.Text`
   `}
 `;
 
-export const Option = styled(TouchableOpacity)`
+export const Option = styled(TouchableOpacity)<Props>`
+  ${({ theme, isActive, isDanger = false }) => css`
+    background-color: ${isActive
+      ? isDanger
+        ? theme.COLORS.RED_LIGHT
+        : theme.COLORS.GREEN_LIGHT
+      : theme.COLORS.GRAY_600};
+
+    border: ${isActive
+      ? isDanger
+        ? `1px solid ${theme.COLORS.RED_DARK}`
+        : `1px solid ${theme.COLORS.GREEN_DARK}`
+      : "none"};
+  `}
   flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
   gap: 8px;
   margin-top: 8px;
   padding: 16px;
@@ -29,8 +45,7 @@ export const Row = styled.View`
   gap: 8px;
 `;
 
-export const CircleIcon = styled(Circle).attrs(({ color }) => ({
-  color: color,
+export const CircleIcon = styled(Circle).attrs({
   weight: "fill",
   size: 8,
-}))``;
+})``;
