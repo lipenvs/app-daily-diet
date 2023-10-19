@@ -11,6 +11,8 @@ import { Statistics } from "@/screens/Statistics";
 import { StatusBar } from "expo-status-bar";
 import { NewMeal } from "@/screens/NewMeal";
 import { CreateRegisterMessage } from "@/screens/CreateRegisterMessage";
+import { QuePena } from "@/screens/QuePena";
+import { ContinueAssim } from "@/screens/ContinueAssim";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -21,7 +23,7 @@ export default function App() {
   return (
     <ThemeProvider theme={myTheme}>
       <StatusBar style="auto" />
-      {fontsLoaded ? <CreateRegisterMessage /> : <ActivityIndicator />}
+      {fontsLoaded ? <ContinueAssim /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
