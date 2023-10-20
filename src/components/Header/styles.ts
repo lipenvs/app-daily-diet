@@ -5,6 +5,7 @@ export const Container = styled.View`
   flex: 1;
   margin-right: 32px;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
 `;
 
@@ -14,6 +15,7 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   flex: 1;
   text-align: center;
+  padding: 24px;
 `;
 
 export const BackButton = styled(TouchableOpacity)`

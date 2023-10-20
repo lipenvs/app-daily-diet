@@ -2,7 +2,7 @@ import { Feedback } from "@/components/Feedback";
 import { Container } from "./styles";
 import { Button } from "@/components/Button";
 
-export function QuePena() {
+export function FeedbackQuePena() {
   return (
     <Container>
       <Feedback

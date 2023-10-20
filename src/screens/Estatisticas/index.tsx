@@ -2,7 +2,7 @@ import { StatisticsHeader } from "@/components/StatisticsHeader";
 import { Container, Content, Row, Title } from "./styles";
 import { InfoCard } from "@/components/InfoCard";
 
-export function Statistics() {
+export function Estatisticas() {
   return (
     <Container>
       <StatisticsHeader percentage={90.21} />

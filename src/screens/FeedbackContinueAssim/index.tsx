@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Feedback } from "@/components/Feedback";
 import { Button } from "@/components/Button";
 
-export function ContinueAssim() {
+export function FeedbackContinueAssim() {
   return (
     <Container>
       <Feedback
