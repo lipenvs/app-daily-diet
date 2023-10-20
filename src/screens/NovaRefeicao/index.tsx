@@ -3,7 +3,7 @@ import { Container, Content, Row } from "./styles";
 import { Button } from "@/components/Button";
 import { Radio } from "@/components/Radio";
 
-export function NewMeal() {
+export function NovaRefeicao() {
   return (
     <Container>
       <Content showsVerticalScrollIndicator={false}>
