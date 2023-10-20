@@ -6,7 +6,7 @@ export const Container = styled.View`
   align-items: center;
   background-color: ${({ theme }) => theme.COLORS.GRAY_600};
   padding: 8px 16px;
-  border-radius: 100%;
+  border-radius: 100px;
   align-self: flex-start;
 `;
 
