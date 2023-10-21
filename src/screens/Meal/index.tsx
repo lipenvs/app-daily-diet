@@ -2,10 +2,13 @@ import { Tag } from "@/components/Tag";
 import { Container } from "../Home/styles";
 import { Subtitle, Description, Title, Group, Content } from "./styles";
 import { Button } from "@/components/Button";
+import { ModalCustom } from "@/components/ModalCustom";
 
-export function Refeicao() {
+export function Meal() {
   return (
     <Container>
+      <ModalCustom />
+
       <Content>
         <Group>
           <Title>Sanduíche</Title>
@@ -22,8 +25,12 @@ export function Refeicao() {
         <Tag />
       </Content>
 
-      <Button label="Editar refeição" style={{ marginBottom: 8 }} />
-      <Button label="Excluir refeição" />
+      <Button
+        iconName="edit"
+        label="Editar refeição"
+        style={{ marginBottom: 8 }}
+      />
+      <Button secondary iconName="delete" label="Excluir refeição" />
     </Container>
   );
 }

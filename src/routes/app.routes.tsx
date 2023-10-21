@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
+import { EditarRefeicao } from "@/screens/EditarRefeicao";
+import { Home } from "@/screens/Home";
+import { Meal } from "@/screens/Meal";
 import { NovaRefeicao } from "@/screens/NovaRefeicao";
-import { Refeicao } from "@/screens/Refeicao";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTheme } from "styled-components/native";
 
@@ -12,11 +14,31 @@ export function AppRoutes() {
   return (
     <Navigator>
       <Screen
-        name="refeicao"
-        component={Refeicao}
+        name="home"
+        component={Home}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Screen
+        name="editarRefeicao"
+        component={EditarRefeicao}
+        options={{
+          headerShown: true,
+          headerStyle: { backgroundColor: theme.COLORS.GRAY_500 },
+          headerTitleAlign: "center",
+          headerTitle: () => <Header title="Editar refeição" />,
+        }}
+      />
+
+      <Screen
+        name="meal"
+        component={Meal}
         options={{
           headerShown: true,
           headerStyle: { backgroundColor: theme.COLORS.GREEN_LIGHT },
+          headerTitleAlign: "center",
           headerTitle: () => <Header title="Refeição" />,
         }}
       />
@@ -27,6 +49,7 @@ export function AppRoutes() {
         options={{
           headerShown: true,
           headerStyle: { backgroundColor: theme.COLORS.GRAY_500 },
+          headerTitleAlign: "center",
           headerTitle: () => <Header title="Nova refeição" />,
         }}
       />

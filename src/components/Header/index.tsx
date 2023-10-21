@@ -1,5 +1,4 @@
-import { ArrowLeft } from "phosphor-react-native";
-import { BackButton, Container, Title } from "./styles";
+import { Container, Title } from "./styles";
 
 type Props = {
   title: string;
@@ -8,9 +7,6 @@ type Props = {
 export function Header({ title }: Props) {
   return (
     <Container>
-      <BackButton>
-        <ArrowLeft />
-      </BackButton>
       <Title>{title}</Title>
     </Container>
   );

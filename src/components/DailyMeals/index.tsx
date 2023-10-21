@@ -1,13 +1,24 @@
 import { ListItem } from "../ListItem";
 import { Container, Title } from "./styles";
 
-export function DailyMeals() {
+export type MealDateTime = {
+  time: string;
+  description: string;
+};
+
+type Props = {
+  date: string;
+  meals: MealDateTime[];
+};
+
+export function DailyMeals({ date, meals }: Props) {
   return (
     <Container>
-      <Title>20/04/2021</Title>
+      <Title>{date}</Title>
 
-      <ListItem mealName="X-Tudo" isOk time="20:00" />
-      <ListItem mealName="X-Tudo" isOk time="20:00" />
+      {meals.map((meal) => (
+        <ListItem mealName={meal.description} isOk time={meal.time} />
+      ))}
     </Container>
   );
 }
