@@ -1,9 +1,16 @@
 import { Input } from "@/components/Input";
 import { Container, Content, Row } from "./styles";
 import { Button } from "@/components/Button";
-import { Radio } from "@/components/Radio";
+import { Radio, RadioOptions } from "@/components/Radio";
+import { useState } from "react";
 
 export function NewMeal() {
+  const [selectedOption, setSelectedOption] = useState<RadioOptions>("Não");
+
+  function handleOptionClick(value: RadioOptions) {
+    setSelectedOption(value);
+  }
+
   return (
     <Container>
       <Content showsVerticalScrollIndicator={false}>
@@ -26,7 +33,10 @@ export function NewMeal() {
           <Input label="Hora" />
         </Row>
 
-        <Radio />
+        <Radio
+          optionSelected={selectedOption}
+          handleOptionClick={handleOptionClick}
+        />
       </Content>
 
       <Button label="Cadastrar refeição" />

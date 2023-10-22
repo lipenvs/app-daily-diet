@@ -1,31 +1,31 @@
 import { myTheme } from "@/theme";
 import { CircleIcon, Container, Label, Option, Row } from "./styles";
-import { useState } from "react";
 
-export function Radio() {
-  const [isOptionSelected, setIsOptionSelected] = useState(false);
+export type RadioOptions = "Sim" | "Não";
 
-  function handleOptionClick(value: boolean) {
-    setIsOptionSelected(value);
-  }
+type Props = {
+  optionSelected: RadioOptions;
+  handleOptionClick: (value: RadioOptions) => void;
+};
 
+export function Radio({ optionSelected, handleOptionClick }: Props) {
   return (
     <Container>
       <Label>Está dentro da dieta?</Label>
 
       <Row>
         <Option
-          isActive={isOptionSelected}
-          onPress={() => handleOptionClick(true)}
+          isActive={optionSelected === "Sim"}
+          onPress={() => handleOptionClick("Sim")}
         >
           <CircleIcon color={myTheme.COLORS.GREEN_DARK} />
           <Label>Sim</Label>
         </Option>
 
         <Option
-          isActive={!isOptionSelected}
+          isActive={optionSelected === "Não"}
           isDanger
-          onPress={() => handleOptionClick(false)}
+          onPress={() => handleOptionClick("Não")}
         >
           <CircleIcon color={myTheme.COLORS.RED_DARK} />
           <Label>Não</Label>
