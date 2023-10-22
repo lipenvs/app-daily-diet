@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
-import { EditarRefeicao } from "@/screens/EditarRefeicao";
+import { EditMeal } from "@/screens/EditMeal";
 import { Home } from "@/screens/Home";
 import { Meal } from "@/screens/Meal";
-import { NovaRefeicao } from "@/screens/NovaRefeicao";
+import { NewMeal } from "@/screens/NewMeal";
+import { Statistics } from "@/screens/Statistics";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTheme } from "styled-components/native";
 
@@ -22,8 +23,16 @@ export function AppRoutes() {
       />
 
       <Screen
-        name="editarRefeicao"
-        component={EditarRefeicao}
+        name="statistics"
+        component={Statistics}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Screen
+        name="editMeal"
+        component={EditMeal}
         options={{
           headerShown: true,
           headerStyle: { backgroundColor: theme.COLORS.GRAY_500 },
@@ -44,8 +53,8 @@ export function AppRoutes() {
       />
 
       <Screen
-        name="novaRefeicao"
-        component={NovaRefeicao}
+        name="newMeal"
+        component={NewMeal}
         options={{
           headerShown: true,
           headerStyle: { backgroundColor: theme.COLORS.GRAY_500 },

@@ -20,7 +20,11 @@ export function Home() {
   const navigation = useNavigation();
 
   function handleNewMeal() {
-    navigation.navigate("novaRefeicao");
+    navigation.navigate("newMeal");
+  }
+
+  function handleStatistics() {
+    navigation.navigate("statistics");
   }
 
   return (
@@ -31,6 +35,7 @@ export function Home() {
         currentPercentage={currentPercentage}
         subtitle="das refeições dentro da dieta"
         style={{ marginTop: 32 }}
+        onPress={handleStatistics}
       />
 
       <Title>Refeições</Title>

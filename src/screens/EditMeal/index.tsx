@@ -3,7 +3,7 @@ import { Container, Content, Row } from "./styles";
 import { Button } from "@/components/Button";
 import { Radio } from "@/components/Radio";
 
-export function EditarRefeicao() {
+export function EditMeal() {
   return (
     <Container>
       <Content showsVerticalScrollIndicator={false}>
