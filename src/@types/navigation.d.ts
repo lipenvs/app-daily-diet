@@ -6,6 +6,8 @@ export declare global {
       newMeal: undefined;
       feedbackContinueAssim: undefined;
       feedbackQuePena: undefined;
+      meal: undefined;
+      editMeal: undefined;
     }
   }
 }
