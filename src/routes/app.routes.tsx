@@ -1,5 +1,7 @@
 import { Header } from "@/components/Header";
 import { EditMeal } from "@/screens/EditMeal";
+import { FeedbackContinueAssim } from "@/screens/FeedbackContinueAssim";
+import { FeedbackQuePena } from "@/screens/FeedbackQuePena";
 import { Home } from "@/screens/Home";
 import { Meal } from "@/screens/Meal";
 import { NewMeal } from "@/screens/NewMeal";
@@ -17,6 +19,22 @@ export function AppRoutes() {
       <Screen
         name="home"
         component={Home}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Screen
+        name="feedbackContinueAssim"
+        component={FeedbackContinueAssim}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Screen
+        name="feedbackQuePena"
+        component={FeedbackQuePena}
         options={{
           headerShown: false,
         }}

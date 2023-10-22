@@ -1,8 +1,15 @@
 import { Container } from "./styles";
 import { Feedback } from "@/components/Feedback";
 import { Button } from "@/components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 export function FeedbackContinueAssim() {
+  const navigation = useNavigation();
+
+  function handleHome() {
+    navigation.navigate("home");
+  }
+
   return (
     <Container>
       <Feedback
@@ -11,7 +18,7 @@ export function FeedbackContinueAssim() {
         subtitle="Você continua dentro da dieta. Muito bem!"
         image={require("@/assets/continue.png")}
       />
-      <Button label="Ir para a página inicial" />
+      <Button label="Ir para a página inicial" onPress={handleHome} />
     </Container>
   );
 }

@@ -1,8 +1,15 @@
 import { Feedback } from "@/components/Feedback";
 import { Container } from "./styles";
 import { Button } from "@/components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 export function FeedbackQuePena() {
+  const navigation = useNavigation();
+
+  function handleHome() {
+    navigation.navigate("home");
+  }
+
   return (
     <Container>
       <Feedback
@@ -12,7 +19,7 @@ export function FeedbackQuePena() {
         image={require("@/assets/quepena.png")}
       />
 
-      <Button label="Ir para a página inicial" />
+      <Button label="Ir para a página inicial" onPress={handleHome} />
     </Container>
   );
 }
